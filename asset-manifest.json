@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/verse-finder/static/css/main.5f361e03.chunk.css",
+    "main.js": "/verse-finder/static/js/main.7c3dfd7d.chunk.js",
+    "main.js.map": "/verse-finder/static/js/main.7c3dfd7d.chunk.js.map",
+    "runtime-main.js": "/verse-finder/static/js/runtime-main.ce7294db.js",
+    "runtime-main.js.map": "/verse-finder/static/js/runtime-main.ce7294db.js.map",
+    "static/js/2.8f842e39.chunk.js": "/verse-finder/static/js/2.8f842e39.chunk.js",
+    "static/js/2.8f842e39.chunk.js.map": "/verse-finder/static/js/2.8f842e39.chunk.js.map",
+    "index.html": "/verse-finder/index.html",
+    "precache-manifest.a2e55002705064c884a2c19cba9cf7d3.js": "/verse-finder/precache-manifest.a2e55002705064c884a2c19cba9cf7d3.js",
+    "service-worker.js": "/verse-finder/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/verse-finder/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.8f842e39.chunk.js.LICENSE.txt": "/verse-finder/static/js/2.8f842e39.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/verse-finder/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce7294db.js",
+    "static/js/2.8f842e39.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.7c3dfd7d.chunk.js"
+  ]
+}
