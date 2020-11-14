@@ -1,7 +1,13 @@
 import React from "react";
+import SermonEditor from "Pages/SermonsView/SermonEditor";
+import GlobalStyles from "Containers/GlobalStyles";
 
 function App() {
-  return <div className="app">APP</div>;
+  return (
+    <GlobalStyles className="app">
+      <SermonEditor />
+    </GlobalStyles>
+  );
 }
 
 export default App;
