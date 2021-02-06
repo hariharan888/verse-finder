@@ -21,6 +21,7 @@ const Wrapper = styled.div`
     font-weight: 600;
     border-radius: 0.8rem;
     margin: 2rem 0rem;
+    overflow-y: auto;
     .header {
       height: 3em;
       .header-label {
@@ -90,7 +91,7 @@ const QuickSearch = () => {
     <Wrapper className="w-100 flex-column align-center">
       <VerseInput className="input verse-search" onSubmit={onSubmit} />
       <div
-        className="verse-view flex-column box-shadow"
+        className="verse-view flex-column box-shadow hide-scrollbar"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
