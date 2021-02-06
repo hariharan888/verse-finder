@@ -1,10 +1,9 @@
 import VerseInput from "Containers/Common/VerseInput";
+import db from "Helpers/db";
+import _ from "lodash";
 import React, { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { Breakpoint } from "react-socks";
 import styled from "styled-components";
-import _ from "lodash";
-import db from "Helpers/db";
 
 const Wrapper = styled.div`
   .verse-search {
