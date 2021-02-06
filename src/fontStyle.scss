@@ -1,0 +1,112 @@
+.fs-h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  .app-medium & {
+    font-size: 2rem;
+  }
+  .app-xlarge & {
+    font-size: 2.6rem;
+  }
+}
+
+.fs-h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  .app-medium & {
+    font-size: 1.8rem;
+  }
+  .app-xlarge & {
+    font-size: 2.2rem;
+  }
+}
+
+.fs-h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  .app-medium & {
+    font-size: 1.5rem;
+  }
+  .app-xlarge & {
+    font-size: 2.6rem;
+  }
+}
+
+.fs-n1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  .app-medium & {
+    font-size: 1.3rem;
+  }
+  .app-xlarge & {
+    font-size: 2rem;
+  }
+}
+
+.fs-n2 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  .app-medium & {
+    font-size: 1.1rem;
+  }
+  .app-xlarge & {
+    font-size: 1.7rem;
+  }
+}
+
+.fs-n3 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  .app-medium & {
+    font-size: 0.9rem;
+  }
+  .app-xlarge & {
+    font-size: 1.4rem;
+  }
+}
+
+.fs-v1 {
+  font-weight: 500;
+  font-size: calc(0.8rem + 2.4vw);
+  line-height: 1.4em;
+}
+
+.fs-dull {
+  color: #898989;
+}
+
+.fs-lighter {
+  font-weight: 300;
+}
+
+.fs-normal {
+  font-weight: 400;
+}
+
+.fs-bold {
+  font-weight: 700;
+}
+
+.fs-bolder {
+  font-weight: 900;
+}
+
+.fs-italic {
+  font-style: italic;
+}
+
+.fs-underline {
+  text-decoration: underline;
+}
+
+.fs-justify {
+  text-align: justify;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
