@@ -90,12 +90,7 @@ const QuickSearch = () => {
   return (
     <Wrapper className="w-100 flex-column align-center">
       <VerseInput className="input verse-search" onSubmit={onSubmit} />
-      <div
-        className="verse-view flex-column box-shadow hide-scrollbar"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
+      <div className="verse-view flex-column box-shadow hide-scrollbar">
         {!_.isEmpty(verse) && (
           <>
             <div className="header flex-row align-center space-between">
@@ -113,7 +108,14 @@ const QuickSearch = () => {
                 onClick={showNext}
               />
             </div>
-            <div className="verse flex-1">{verse.text.tamil}</div>
+            <div
+              className="verse flex-1"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              {verse.text.tamil}
+            </div>
           </>
         )}
       </div>
