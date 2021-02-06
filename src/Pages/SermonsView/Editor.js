@@ -41,6 +41,7 @@ import {
   H2,
   H3
 } from "./SlateComponents";
+import Persistor from "Helpers/Persistor";
 
 // Bug Workaround: Editor selection set to null on blur
 Transforms.deselect = _.noop;
@@ -152,7 +153,9 @@ const HOTKEYS = {
 const HOCs = [withReact, withHistory];
 
 const EditorWithToolbar = () => {
-  const [value, setValue] = useState(INITIAL_VALUE);
+  const [value, setValue] = useState(
+    JSON.parse(Persistor.get("slate")) || INITIAL_VALUE
+  );
   const [customFormats, setCustomFormats] = useState({
     "interleave-verses": true
   }); // formats not handled by slate
@@ -174,7 +177,7 @@ const EditorWithToolbar = () => {
         editor={editor}
         value={value}
         onChange={val => {
-          console.log(val);
+          Persistor.save("slate", JSON.stringify(val));
           setValue(val);
         }}
       >

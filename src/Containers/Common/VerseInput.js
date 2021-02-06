@@ -48,7 +48,7 @@ const parseReferences = str => {
   const matches = _.head(scan(_.trim(str), VERSE_REGEX));
   if (_.isEmpty(matches)) throw new Error("Invalid Search term");
   const [bookMatch, chapterMatch, verseMatch] = matches;
-  const bookRegex = new RegExp(bookMatch, "gi");
+  const bookRegex = new RegExp(`^${bookMatch}`, "gi");
   const book = _.find(books, bk => bookRegex.test(bk.english));
   const chapterNum = _.toFinite(chapterMatch);
   const verseNums = parseVerseNumbers(verseMatch);
@@ -70,6 +70,10 @@ const parseReferences = str => {
 const VerseInput = props => {
   const [filterText, setFilterText] = useState("");
   const inputRef = useRef(null);
+  const {
+    clearOnSubmit = true,
+    icon = <FaSearch size={16} color="lightgray" />
+  } = props;
 
   const handleKeyDown = async e => {
     if (e.keyCode === 13) {
@@ -88,11 +92,11 @@ const VerseInput = props => {
             verses: results
           });
         }
+        if (clearOnSubmit) setFilterText("");
       } catch (error) {
         console.log(error);
         // do nothing
       }
-      setFilterText("");
     }
   };
 
@@ -105,7 +109,7 @@ const VerseInput = props => {
   return (
     <BoxInput
       className="input verse-search mousetrap"
-      icon={<FaSearch size={16} color="lightgray" />}
+      icon={icon}
       placeholder="Search for verses..."
       value={filterText}
       onChange={e => setFilterText(e.target.value)}
